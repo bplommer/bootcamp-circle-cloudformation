@@ -19,10 +19,11 @@ workflows:
   version: 2
   test-and-deploy:
     triggers:
-      filters:
-        branches:
-          only:
-            - master
+      - schedule:
+        filters:
+          branches:
+            only:
+              - master
     jobs:
       - test
       - deploy
