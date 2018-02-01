@@ -18,10 +18,12 @@ jobs:
 workflows:
   version: 2
   test-and-deploy:
-    filters:
-      branches:
-        only:
-          - master
     jobs:
       - test
-      - deploy
+      - deploy:
+          filters:
+              branches:
+                only:
+                  - master
+          requires:
+            - test
