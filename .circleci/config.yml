@@ -20,10 +20,10 @@ workflows:
   test-and-deploy:
     triggers:
       - schedule:
-        filters:
-          branches:
-            only:
-              - master
+          filters:
+            branches:
+              only:
+                - master
     jobs:
       - test
       - deploy
