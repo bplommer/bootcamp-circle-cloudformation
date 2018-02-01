@@ -14,7 +14,7 @@ jobs:
     working_directory: ~/bootcamp-circle-cloudformation
     steps:
       - checkout
-      - run: ./build-and-deploy-to-aws.sh ben-asg-InstanceProfile-Z2U47T146DP5 ben
+      - run: ./build-and-deploy-to-aws.sh ben-asg-AutoScalingGroup-S75VMPEB81E8 ben
 workflows:
   version: 2
   test-and-deploy:
